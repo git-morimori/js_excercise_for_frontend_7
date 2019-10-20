@@ -23,14 +23,12 @@
       const results = data.results;
 
       results.forEach((quiz, index) => {
-        if (index < 10) {
-          const quizTitle = document.createElement('li');
-          quizTitle.textContent = `${index + 1}件目のクイズデータ`;
-          quizList.appendChild(quizTitle);
+        const quizTitle = document.createElement('li');
+        quizTitle.textContent = `${index + 1}件目のクイズデータ`;
+        quizList.appendChild(quizTitle);
 
-          const quizContent = buildQuizList(quiz);
-          quizTitle.appendChild(quizContent);
-        }
+        const quizContent = buildQuizList(quiz);
+        quizTitle.appendChild(quizContent);
       });
     });
 
